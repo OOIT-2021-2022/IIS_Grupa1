@@ -31,9 +31,9 @@ public class Test {
 		Line l1 = new Line();
 		System.out.println(l1.getStartPoint() + " " + l1.getEndPoint());
 		System.out.println(l1.isSelected());
-		
-		Rectangle r1=new Rectangle();
-		Circle c1=new Circle();
+
+		Rectangle r1 = new Rectangle();
+		Circle c1 = new Circle();
 
 		// 1. Inicijalizovati x koordinatu tacke p
 		// na vrednost y koordinate tacke p1
@@ -45,8 +45,8 @@ public class Test {
 		// za krajnju tacku linije l1 tacku p1
 		l1.setStartPoint(p);
 		l1.setEndPoint(p1);
-		System.out.println(l1.getStartPoint().getX() + " " +l1.getStartPoint().getY());
-		System.out.println(l1.getEndPoint().getX() + " " +l1.getEndPoint().getY());
+		System.out.println(l1.getStartPoint().getX() + " " + l1.getStartPoint().getY());
+		System.out.println(l1.getEndPoint().getX() + " " + l1.getEndPoint().getY());
 
 		// 3. Postaviti y koordinatu krajnje tacke l1 na 23
 		System.out.println(l1.getEndPoint().getY());
@@ -63,13 +63,13 @@ public class Test {
 		// duzine linije l1 umanjene za vrednost zbira x i y
 		// koordinate pocetne tacke linije l1
 		System.out.println(l1.getEndPoint().getX());
-		l1.getEndPoint().setX((int)(l1.length()-(l1.getStartPoint().getX()+l1.getStartPoint().getY())));
+		l1.getEndPoint().setX((int) (l1.length() - (l1.getStartPoint().getX() + l1.getStartPoint().getY())));
 		System.out.println(l1.getEndPoint().getX());
 
 		// 6. Postaviti x koordinatu tacke gore levo pravougaonika
 		// r1 na vrednost 10 i y koordinatu na vrednost 15
 		System.out.println(r1.getUpperLeftPoint());
-		//r1.getUpperLeftPoint().setX(10);
+		// r1.getUpperLeftPoint().setX(10);
 		r1.setUpperLeftPoint(p);
 		r1.getUpperLeftPoint().setX(10);
 		r1.getUpperLeftPoint().setY(15);
@@ -82,8 +82,17 @@ public class Test {
 		// povrsine pravougaonika r1 i y koordinate pocetne tacke linije l1
 		r1.setHeight(10);
 		r1.setWidth(20);
-		c1.getCenter().setX(r1.area()-l1.getStartPoint().getY());
+		c1.getCenter().setX(r1.area() - l1.getStartPoint().getY());
 		System.out.println(c1.getCenter().getX());
+
+		// Vezbe 4
+		/*
+		 * 1.Postaviti koordinatu x centra ranije kreiranog kruga k na vrednost zbira
+		 * vrednosti poluprecnika  kruga k i vrednosti koja predstavlja udaljenost
+		 * pocetne i krajnje tacke prethodno kreirane linije lin (NE duzine). Sve
+		 * objekte kreirati samostalno.
+		 */
+
 	}
 
 }

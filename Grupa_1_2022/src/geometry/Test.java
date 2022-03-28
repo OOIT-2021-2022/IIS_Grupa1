@@ -104,13 +104,19 @@ public class Test {
 		System.out.println(p4);
 		System.out.println(l1);
 		
+		//nakon definisanja equals(...) metode
+		//razlicite vrednosti i razlicite reference
 		System.out.println(p4.equals(p5));
-		System.out.println(p4==p5);
+		System.out.println(p4==p5);		
 		
+		//dodela vrednosti i reference
 		p4=p5;
+		
+		//iste vrednosti i iste reference
 		System.out.println(p4.equals(p5));
 		System.out.println(p4==p5);
 		
+		//iste vrednosti, ali razlicite reference zbog operatora NEW
 		Point p6=new Point(10,15);
 		Point p7=new Point(10,15);
 		System.out.println(p6==p7);

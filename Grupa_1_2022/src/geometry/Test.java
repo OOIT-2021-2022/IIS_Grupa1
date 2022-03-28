@@ -121,6 +121,9 @@ public class Test {
 		Point p7=new Point(10,15);
 		System.out.println(p6==p7);
 		System.out.println(p6.equals(p7));
+		
+		
+		//ZADATAK - testirati konstruktore, toString() i equals(...) metode
 
 
 	}

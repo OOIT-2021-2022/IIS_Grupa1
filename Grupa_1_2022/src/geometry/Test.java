@@ -99,6 +99,23 @@ public class Test {
 		System.out.println(p4.getX());
 		System.out.println(p5.isSelected());
 		
+		//za tacku poziva toString() i ispisuje koordinate tacke dok za liniju ispisuje referencu (nismo jos redefinisali toString() u liniji)
+		System.out.println(p4.toString());
+		System.out.println(p4);
+		System.out.println(l1);
+		
+		System.out.println(p4.equals(p5));
+		System.out.println(p4==p5);
+		
+		p4=p5;
+		System.out.println(p4.equals(p5));
+		System.out.println(p4==p5);
+		
+		Point p6=new Point(10,15);
+		Point p7=new Point(10,15);
+		System.out.println(p6==p7);
+		System.out.println(p6.equals(p7));
+
 
 	}
 

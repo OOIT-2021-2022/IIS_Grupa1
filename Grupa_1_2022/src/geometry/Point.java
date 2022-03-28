@@ -30,7 +30,7 @@ public class Point {
 
 	public boolean equals(Object obj) {
 		if (obj instanceof Point) {
-			Point pomocna = (Point) obj;
+			Point pomocna = (Point) obj;//downcast
 			if (this.x == pomocna.x && this.y == pomocna.y)
 				return true;
 			else
@@ -47,10 +47,7 @@ public class Point {
 		this.x = x;
 	}
 
-	public String toString() {
-		return "(" + x + "," + y + ")";
-	}
-
+	
 	public int getY() {
 		return y;
 	}
@@ -65,6 +62,16 @@ public class Point {
 
 	public void setSelected(boolean selected) {
 		this.selected = selected;
+	}
+	
+	public String toString() {
+		return "(" + x + "," + y + ")";
+		
+		//nije ispravno
+		//return x.toString(); 
+		
+		//ispravno, ali necemo samo x koordinatu
+		//return String.valueOf(x); 
 	}
 
 }

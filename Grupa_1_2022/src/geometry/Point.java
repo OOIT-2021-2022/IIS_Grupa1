@@ -28,12 +28,27 @@ public class Point {
 
 	}
 
+	public boolean equals(Object obj) {
+		if (obj instanceof Point) {
+			Point pomocna = (Point) obj;
+			if (this.x == pomocna.x && this.y == pomocna.y)
+				return true;
+			else
+				return false;
+		} else
+			return false;
+	}
+
 	public int getX() {
 		return this.x;
 	}
 
 	public void setX(int x) {
 		this.x = x;
+	}
+
+	public String toString() {
+		return "(" + x + "," + y + ")";
 	}
 
 	public int getY() {

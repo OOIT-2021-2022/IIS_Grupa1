@@ -92,6 +92,13 @@ public class Test {
 		 * pocetne i krajnje tacke prethodno kreirane linije lin (NE duzine). Sve
 		 * objekte kreirati samostalno.
 		 */
+		
+		System.out.println("Vezbe 4");
+		Point p4=new Point(10,15);
+		Point p5=new Point(15,20,true);
+		System.out.println(p4.getX());
+		System.out.println(p5.isSelected());
+		
 
 	}
 

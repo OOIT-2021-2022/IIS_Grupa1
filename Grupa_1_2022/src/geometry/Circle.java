@@ -1,9 +1,8 @@
 package geometry;
 
 public class Circle {
-	private Point center;
+	protected Point center;
 	private int radius;
-	
 	private boolean selected;
 
 	public Circle() {
@@ -19,12 +18,11 @@ public class Circle {
 		this(center, radius);
 		this.selected = selected;
 	}
-	
+
 	public boolean equals(Object obj) {
 		if (obj instanceof Circle) {
 			Circle pomocni = (Circle) obj;
-			if (this.center.equals(pomocni.center) &&
-					this.radius == pomocni.radius) {
+			if (this.center.equals(pomocni.center) && this.radius == pomocni.radius) {
 				return true;
 			} else {
 				return false;
@@ -34,14 +32,22 @@ public class Circle {
 		}
 	}
 
+	public boolean contains(int x, int y) {
+		return center.distance(x, y) <= radius;
+	}
+	
+	public boolean contains(Point clickPoint) {
+		return center.distance(clickPoint.getX(), clickPoint.getY()) <= radius;
+	}
+
 	public double area() {
-		return radius*radius*Math.PI;
+		return radius * radius * Math.PI;
 	}
-	
+
 	public double circumference() {
-		return 2*radius*Math.PI;
+		return 2 * radius * Math.PI;
 	}
-	
+
 	public Point getCenter() {
 		return this.center;
 	}
@@ -58,6 +64,14 @@ public class Circle {
 		this.radius = radius;
 	}
 	
+	public boolean isSelected() {
+		return selected;
+	}
+
+	public void setSelected(boolean selected) {
+		this.selected = selected;
+	}
+
 	public String toString() {
 		// Center=(x,y), radius= radius
 		return "Center=" + center + ", radius=" + radius;

@@ -1,10 +1,11 @@
 package geometry;
 
-public class Point {
+import java.awt.Graphics;
+
+public class Point extends Shape {
 
 	private int x;
 	private int y;
-	private boolean selected;
 
 	public Point() {
 
@@ -17,7 +18,7 @@ public class Point {
 
 	public Point(int x, int y, boolean selected) {
 		this(x, y);
-		this.selected = selected;
+		setSelected(selected);
 	}
 
 	public double distance(int xPoint2, int yPoint2) {
@@ -27,20 +28,26 @@ public class Point {
 		return d;
 
 	}
-	
+
 	public boolean contains(int x, int y) {
 		return this.distance(x, y) <= 2;
 	}
 
 	public boolean equals(Object obj) {
 		if (obj instanceof Point) {
-			Point pomocna = (Point) obj;//downcast
+			Point pomocna = (Point) obj;// downcast
 			if (this.x == pomocna.x && this.y == pomocna.y)
 				return true;
 			else
 				return false;
 		} else
 			return false;
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		g.drawLine(x - 2, y, x + 2, y);
+		g.drawLine(x, y - 2, x, y + 2);
 	}
 
 	public int getX() {
@@ -51,7 +58,6 @@ public class Point {
 		this.x = x;
 	}
 
-	
 	public int getY() {
 		return y;
 	}
@@ -60,22 +66,14 @@ public class Point {
 		this.y = y;
 	}
 
-	public boolean isSelected() {
-		return selected;
-	}
-
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
-	
 	public String toString() {
 		return "(" + x + "," + y + ")";
-		
-		//nije ispravno
-		//return x.toString(); 
-		
-		//ispravno, ali necemo samo x koordinatu
-		//return String.valueOf(x); 
+
+		// nije ispravno
+		// return x.toString();
+
+		// ispravno, ali necemo samo x koordinatu
+		// return String.valueOf(x);
 	}
 
 }

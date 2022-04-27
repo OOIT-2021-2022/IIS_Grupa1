@@ -146,13 +146,17 @@ public class Test {
 		Point clickPoint = new Point(12, 17);
 		System.out.println(p7.contains(clickPoint.getX(), clickPoint.getY()));
 		System.out.println(lin.contains(clickPoint.getX(), clickPoint.getY()));
-		
-		
-		Donut donut = new Donut (new Point(12, 17), 20, 10, true);
+
+		Donut donut = new Donut(new Point(12, 17), 20, 10, true);
 		System.out.println(donut.toString());
 		System.out.println(donut instanceof Circle);
 		System.out.println(donut instanceof Donut);
 		System.out.println(c2 instanceof Donut);
+
+		// Vezbe 6.
+		System.out.println("Vezbe 6");
+		Shape shape = new Point(10, 15);
+		System.out.println(shape);
 	}
 
 }

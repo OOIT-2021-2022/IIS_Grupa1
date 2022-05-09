@@ -176,43 +176,47 @@ public class Test {
 		movedCircle.moveTo(15, 15);
 		System.out.println(movedCircle);
 
-		
-		//Comparable
+		// Comparable
 		movedPoint.compareTo(clickPoint);
-		
-		Line line1 = new Line(new Point(10,15),new Point(20,25));
-		Line line2 = new Line(new Point(15,20),new Point(25,25));
-		Line line3 = new Line(new Point(10,25),new Point(30,40));
-		Line[] lines = {line1, line2, line3};	
-		
+
+		Line line1 = new Line(new Point(10, 15), new Point(20, 25));
+		Line line2 = new Line(new Point(15, 20), new Point(25, 25));
+		Line line3 = new Line(new Point(10, 25), new Point(30, 40));
+		Line[] lines = { line1, line2, line3 };
+
 		System.out.println("Niz linija pre sortiranja");
 		for (int i = 0; i < lines.length; i++) {
 			System.out.println(lines[i]);
 		}
-		
+
 		Arrays.sort(lines);
-		
+
 		System.out.println("Niz linija posle sortiranja");
 		for (int i = 0; i < lines.length; i++) {
 			System.out.println(lines[i]);
 		}
-		
-		
-		Rectangle rectangle1 = new Rectangle(new Point(10,15), 10,15);
-		Rectangle rectangle2 = new Rectangle(new Point(10,15), 30,40);
-		Rectangle rectangle3 = new Rectangle(new Point(10,15), 10,10);
-		Rectangle[] rectangles = {rectangle1, rectangle2, rectangle3};
-		
+
+		Rectangle rectangle1 = new Rectangle(new Point(10, 15), 10, 15);
+		Rectangle rectangle2 = new Rectangle(new Point(10, 15), 30, 40);
+		Rectangle rectangle3 = new Rectangle(new Point(10, 15), 10, 10);
+		Rectangle[] rectangles = { rectangle1, rectangle2, rectangle3 };
+
 		System.out.println("Niz pravougaonika pre sortiranja");
 		for (int i = 0; i < rectangles.length; i++) {
 			System.out.println(rectangles[i]);
 		}
-		
+
 		Arrays.sort(rectangles);
-		
+
 		System.out.println("Niz pravougaonika posle sortiranja");
 		for (int i = 0; i < rectangles.length; i++) {
 			System.out.println(rectangles[i]);
+		}
+
+		// Svi oblici u jednoj listi
+		Shape[] shapes = { rectangle1, rectangle2, line2, line3 };
+		for (int j = 0; j < shapes.length; j++) {
+			shapes[j].moveBy(10, 15);
 		}
 	}
 

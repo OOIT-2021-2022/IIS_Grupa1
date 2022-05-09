@@ -1,5 +1,8 @@
 package geometry;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Test {
 
 	public static void main(String[] args) {
@@ -157,6 +160,60 @@ public class Test {
 		System.out.println("Vezbe 6");
 		Shape shape = new Point(10, 15);
 		System.out.println(shape);
+
+		// Vezbe 7.
+		System.out.println("Vezbe 7");
+		Point movedPoint = new Point(10, 15);
+		System.out.println(movedPoint);
+		movedPoint.moveBy(5, 5);
+		System.out.println(movedPoint);
+		movedPoint.moveTo(10, 15);
+		System.out.println(movedPoint);
+
+		Circle movedCircle = new Circle(new Point(20, 30), 15);
+		movedCircle.moveBy(5, 10);
+		System.out.println(movedCircle);
+		movedCircle.moveTo(15, 15);
+		System.out.println(movedCircle);
+
+		
+		//Comparable
+		movedPoint.compareTo(clickPoint);
+		
+		Line line1 = new Line(new Point(10,15),new Point(20,25));
+		Line line2 = new Line(new Point(15,20),new Point(25,25));
+		Line line3 = new Line(new Point(10,25),new Point(30,40));
+		Line[] lines = {line1, line2, line3};	
+		
+		System.out.println("Niz linija pre sortiranja");
+		for (int i = 0; i < lines.length; i++) {
+			System.out.println(lines[i]);
+		}
+		
+		Arrays.sort(lines);
+		
+		System.out.println("Niz linija posle sortiranja");
+		for (int i = 0; i < lines.length; i++) {
+			System.out.println(lines[i]);
+		}
+		
+		
+		Rectangle rectangle1 = new Rectangle(new Point(10,15), 10,15);
+		Rectangle rectangle2 = new Rectangle(new Point(10,15), 30,40);
+		Rectangle rectangle3 = new Rectangle(new Point(10,15), 10,10);
+		Rectangle[] rectangles = {rectangle1, rectangle2, rectangle3};
+		
+		System.out.println("Niz pravougaonika pre sortiranja");
+		for (int i = 0; i < rectangles.length; i++) {
+			System.out.println(rectangles[i]);
+		}
+		
+		Arrays.sort(rectangles);
+		
+		System.out.println("Niz pravougaonika posle sortiranja");
+		for (int i = 0; i < rectangles.length; i++) {
+			System.out.println(rectangles[i]);
+		}
 	}
 
 }

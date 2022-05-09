@@ -46,6 +46,27 @@ public class Line extends Shape{
 	public void draw(Graphics g) {
 		g.drawLine(startPoint.getX(), startPoint.getY(), endPoint.getX(), endPoint.getY());		
 	}
+	
+	@Override
+	public void moveTo(int x, int y) {
+		startPoint.moveTo(x, y);
+		endPoint.moveTo(x, y);
+	}
+
+	@Override
+	public void moveBy(int x, int y) {
+		startPoint.moveBy(x, y);
+		endPoint.moveBy(x, y);	
+	}
+	
+	@Override
+	public int compareTo(Object obj) {
+		if(obj instanceof Line) {
+			Line lineToCompare = (Line)obj;
+			return (int)(this.length() - lineToCompare.length());
+		}			
+		return 0;
+	}
 
 	public void setStartPoint(Point startPoint) {
 		this.startPoint = startPoint;
